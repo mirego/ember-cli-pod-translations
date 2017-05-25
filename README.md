@@ -36,7 +36,7 @@ $ ember install ember-cli-pod-translations
 	// app/pods/components/x-foo/component.js
 
 	import Ember from 'ember';
-	import Localizable from 'ember-cli-pod-translations';
+	import Localizable from 'ember-cli-pod-translations/mixins/localizable';
 	import translations from './translations';
 
 	export default Ember.Component.extend(Localizable(translations));
@@ -48,7 +48,7 @@ $ ember install ember-cli-pod-translations
 	// app/pods/components/x-foo/component.js
 
 	import Ember from 'ember';
-	import Localizable from 'ember-cli-pod-translations';
+	import Localizable from 'ember-cli-pod-translations/mixins/localizable';
 	import translations from './translations';
 
 	export default Ember.Component.extend(Localizable(translations), {
