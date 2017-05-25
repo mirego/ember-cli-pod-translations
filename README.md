@@ -61,7 +61,7 @@ $ ember install ember-cli-pod-translations
 4. __Use your translations in your template__
 
 	```hbs
-	// app/pods/components/x-foo/template.hbs
+	{{!-- app/pods/components/x-foo/template.hbs --}}
 
 	{{local-t localizablePrefix 'hello_world'}}
 
@@ -97,7 +97,7 @@ $ ember test --server
 ## Building
 
 ```shell
-ember build
+$ ember build
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
