@@ -9,8 +9,7 @@ export default function(translations) {
     init() {
       this._super(...arguments);
 
-      const localizablePrefix = this.constructor
-        .toString()
+      const localizablePrefix = this._debugContainerKey
         .split(':')
         .filter((segment) => !!segment)
         .pop();
