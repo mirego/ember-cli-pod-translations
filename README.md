@@ -1,5 +1,7 @@
 # ember-cli-pod-translations
 
+[![Build Status](https://travis-ci.org/mirego/ember-cli-pod-translations.svg?branch=master)](https://travis-ci.org/mirego/ember-cli-pod-translations)
+
 An addon to compile your locale files inside pods.
 
 ## Installation
