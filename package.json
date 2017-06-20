@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-pod-translations",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An addon to compile your locale files inside pods.",
   "keywords": [
     "ember-addon",
