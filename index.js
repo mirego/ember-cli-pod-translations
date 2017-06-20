@@ -21,7 +21,7 @@ TranslationsCompiler.prototype.constructor = TranslationsCompiler;
 TranslationsCompiler.prototype.build = function() {
   const translationsFiles = glob.sync(`${this.inputPaths[0]}/**/translations.*.json`);
 
-  const localeRegexp = /translations\.([a-z]+)\.json/g;
+  const localeRegexp = /translations\.(.+)\.json/g;
 
   // This object is structured as to be able to push
   // all translations in the same file easily
