@@ -19,7 +19,8 @@ TranslationsCompiler.prototype = Object.create(Plugin.prototype);
 TranslationsCompiler.prototype.constructor = TranslationsCompiler;
 
 TranslationsCompiler.prototype.build = function() {
-  const translationsFiles = glob.sync(`${this.inputPaths[0]}/**/translations.*.json`);
+  const inputPath = this.inputPaths[0].split(path.sep).join('/');
+  const translationsFiles = glob.sync(`${inputPath}/**/translations.*.json`);
 
   const localeRegexp = /translations\.(.+)\.json/g;
 
@@ -33,7 +34,7 @@ TranslationsCompiler.prototype.build = function() {
   const processedPods = translationsFiles.reduce((pods, file) => {
     localeRegexp.lastIndex = 0;
     const [_match, locale] = localeRegexp.exec(file);
-    const podPath = path.dirname(file).replace(this.inputPaths[0], '');
+    const podPath = path.dirname(file).replace(inputPath, '');
     const translations = JSON.parse(fs.readFileSync(file));
 
     if (pods.has(podPath)) {
